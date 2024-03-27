@@ -1,0 +1,172 @@
+/* Import Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background: #cfe0f5; /* Lighter background */
+}
+h1 {
+  background: #1a237e; /* Darker blue */
+  font-size: 2rem; /* Increased font size for title */
+  text-align: center;
+  padding: 18px 0;
+  color: #fff;
+  text-transform: uppercase; /* Uppercase title text */
+  margin-bottom: 30px; /* Added space below title */
+}
+.container {
+  max-width: 1200px; /* Added max-width for content container */
+  margin: 0 auto; /* Center align container */
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center align items */
+}
+.weather-input {
+  width: 100%;
+  max-width: 550px; /* Added max-width for input section */
+}
+.weather-input input {
+  height: 46px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem; /* Adjusted font size for input */
+  padding: 0 15px; /* Slightly increased padding */
+  margin: 10px 0 20px 0;
+  border-radius: 6px; /* Rounded corners */
+  border: 1px solid #90a4cc; /* Lighter border */
+  transition: border-color 0.3s; /* Smooth border transition */
+}
+.weather-input input:focus {
+  border-color: #1a237e; /* Darker blue border on focus */
+}
+.weather-input .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #0b132b; /* Darker separator */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather-input .separator::before{
+  content: "or";
+  color: #1a1d1e;
+  font-size: 1rem; /* Adjusted font size */
+  padding: 0 10px; /* Slightly increased padding */
+  margin-top: -4px;
+  background: #cfe0f5; /* Match background color */
+}
+.weather-input button {
+  width: 100%;
+  padding: 12px 0; /* Increased padding */
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 6px; /* Rounded corners */
+  font-size: 1rem;
+  color: #fff;
+  background: #1a237e; /* Darker blue */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+.weather-input .search-btn:hover, .weather-input .location-btn:hover {
+  background: #000051; /* Darker blue on hover */
+}
+.weather-data {
+  width: 100%;
+  margin-top: 40px; /* Added space between input and weather data */
+}
+.weather-data .current-weather {
+  color: #fff;
+  background: #1a237e; /* Darker blue */
+  border-radius: 6px; /* Rounded corners */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+}
+.current-weather h2 {
+  font-weight: 700;
+  font-size: 1.5rem; /* Adjusted font size */
+}
+.weather-data h6 {
+  margin-top: 12px;
+  font-size: 0.9rem; /* Reduced font size */
+  font-weight: 500;
+}
+.current-weather .icon {
+  text-align: center;
+}
+.current-weather .icon img {
+  max-width: 100px; /* Increased max-width */
+  margin-top: -10px; /* Adjusted margin */
+}
+.current-weather .icon h6 {
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+.days-forecast h2 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+.days-forecast .weather-cards {
+  display: flex;
+  gap: 20px;
+}
+.weather-cards .card {
+  color: #fff;
+  padding: 18px 16px;
+  list-style: none;
+  width: calc(100% / 5);
+  background: #4d648d; /* Darker gray-blue */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+}
+.weather-cards .card h3 {
+  font-size: 1.1rem; /* Adjusted font size */
+  font-weight: 600;
+}
+.weather-cards .card img {
+  max-width: 80px; /* Reduced max-width */
+  margin: 5px 0 -12px 0;
+}
+
+@media (max-width: 1400px) {
+  .weather-cards .card {
+    width: calc(100% / 4 - 15px);
+  }
+}
+@media (max-width: 1200px) {
+  .weather-cards .card {
+    width: calc(100% / 3 - 15px);
+  }
+}
+@media (max-width: 950px) {
+  .weather-input {
+    max-width: 450px; /* Reduced max-width for input section */
+  }
+  .weather-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1.8rem; /* Adjusted font size for smaller screens */
+  }
+  .weather-data .current-weather {
+    flex-direction: column; /* Stack weather data vertically */
+    align-items: center; /* Center align items */
+  }
+  .weather-input {
+    max-width: 100%; /* Full width for smaller screens */
+  }
+  .weather-data h2 {
+    font-size: 1.3rem; /* Adjusted font size */
+  }
+  .days-forecast h2 {
+    font-size: 1.3rem; /* Adjusted font size */
+  }
+}
